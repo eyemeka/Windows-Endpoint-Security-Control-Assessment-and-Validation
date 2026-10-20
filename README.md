@@ -227,14 +227,12 @@ The objective was to validate Sysmon's ability to record process creation activi
 
 Open Command Prompt.
 Run the following commands:
-whoami
+whoami, 
 ipconfig
 
-Open Event Viewer and navigate to Applications and Services Logs → Microsoft → Windows → Sysmon → Operational.
+Open Event Viewer and navigate to Applications and Services Logs - Microsoft - Windows - Sysmon - Operational.
 Locate Event ID 1 for the execution of ipconfig.exe.
 Open the event and review the available process details.
-
-## 7.3 Results
 
 ## 7.3 Results
 Sysmon recorded Event ID 1 for <code>ipconfig.exe</code>. The event contained process information including the executable path, command line, parent process, user context, integrity level, and SHA-256 hash.
