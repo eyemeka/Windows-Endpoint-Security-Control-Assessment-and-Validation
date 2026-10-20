@@ -224,7 +224,6 @@ This evidence shows Windows recording the addition of the test account to the Re
 The objective was to validate Sysmon's ability to record process creation activity and capture details useful for security investigations.
 
 ## 7.2 Test Procedure<
-<ol start="1">
  	<li>Open Command Prompt.</li>
  	<li>Run the following commands:</li>
 </ol>
@@ -237,7 +236,7 @@ ipconfig
  	<li>Open the event and review the available process details.</li>
 </ol>
 
-  ## 7.3 Results
+## 7.3 Results
 Sysmon recorded Event ID 1 for <code>ipconfig.exe</code>. The event contained process information including the executable path, command line, parent process, user context, integrity level, and SHA-256 hash.
 
 The event identified <code>cmd.exe</code> as the parent process and recorded the user context under which the command ran.
