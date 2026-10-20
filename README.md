@@ -91,7 +91,7 @@ After installation, Windows Event Viewer was opened. The following path was used
 <code>Applications and Services Logs → Microsoft → Windows → Sysmon → Operational</code>
 
 The log was checked for Event ID 1, which records process creation. A process creation event was located and examined to confirm that Sysmon was collecting process activity.
-IMG 1
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-18%20211913.png)
 
 ## 3.4 Result
 Sysmon was installed successfully, and Event ID 1 was observed in the Sysmon Operational log. This confirmed that the monitoring component was operational and recording process creation events.
@@ -118,7 +118,7 @@ The objective was to verify that Windows Security logs recorded successful and f
 Event ID 4624 was located in the Windows Security log. The event showed Logon Type 5, which indicates a service logon. Therefore, this event confirmed that Windows recorded a successful service logon, not an interactive user logon.
 
 ## Evidence
-IMG 2
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-18%20212612.png)
 
 <strong>Figure: Successful Service Logon Event (Event ID 4624)</strong>
 
@@ -140,7 +140,7 @@ This evidence shows a successful logon event and its Logon Type value in the Win
 Event ID 4625 was located after a deliberate failed logon attempt. This demonstrated that Windows recorded the failed authentication event in its Security log.
 
 ## Evidence
-IMG 3
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-18%20213421.png)
 
 <strong>Figure: Failed Logon Event (Event ID 4625)</strong>
 
@@ -170,7 +170,7 @@ The objective was to verify that Windows recorded the creation of a local user a
 </ol>
 <strong>Note:</strong> The command above uses a password prompt to avoid exposing the password in the command itself. In the original lab, a temporary password was supplied directly in the command.
 
-IMG 4
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-18%20213421.png)
 
 ## 5.3 Results
 Event ID 4720 was located in the Windows Security log for the <code>LabTestUser</code> account. This confirmed that Windows recorded the local account creation activity.
@@ -178,7 +178,7 @@ Event ID 4720 was located in the Windows Security log for the <code>LabTestUser<
 The result demonstrates that account management activity can be reviewed through Windows Security logs.
 
 ## 5.4 Evidence
-IMG 5
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-18%20214336.png)
 
 <strong>Figure 5.1: Local User Account Creation Event (Event ID 4720)</strong>
 
@@ -212,7 +212,7 @@ This confirmed that Windows recorded the group membership change.
 Group membership changes can affect access to system resources and administrative capabilities. They should therefore be authorised, monitored, and reviewed.
 
 ## 6.4 Evidence</h3>
-IMG 6
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-19%20091708.png)
 
 <strong>Figure 6.1: Security Group Membership Change (Event ID 4732)</strong>
 
@@ -229,7 +229,7 @@ Open Command Prompt.
 Run the following commands:
 whoami, 
 ipconfig
-
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-19%20092138.png)
 Open Event Viewer and navigate to Applications and Services Logs - Microsoft - Windows - Sysmon - Operational.
 Locate Event ID 1 for the execution of ipconfig.exe.
 Open the event and review the available process details.
@@ -244,7 +244,7 @@ This information can help an analyst establish which process started, how it was
 The test used a legitimate Windows utility. It validated process telemetry collection but did not test the detection of malicious activity.
 
 ## 7.4 Evidence
-IMG 8
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-19%20094023.png)
 
 <strong>Figure 7.1: Sysmon Process Creation Event for ipconfig.exe (Event ID 1)</strong>
 
@@ -345,7 +345,7 @@ This confirmed that successful process creation auditing was enabled and produci
 The remediation complemented Sysmon process monitoring by providing process creation records in a second Windows logging source. This may support investigation and cross-checking, although centralised collection and alerting were not tested.
 
 ## 9.5 Evidence
-IMG
+![image alt](https://github.com/eyemeka/ScreenShots/blob/main/Screenshot%202026-10-19%20100111.png)
 
 <strong>Figure 9.2: Windows Security Process Creation Event (Event ID 4688)</strong>
 
