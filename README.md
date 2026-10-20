@@ -75,7 +75,7 @@ These recovery points provided options for returning the environment to its earl
 
 # 3. Sysmon Installation and Validation
 
-## 3.1 Objective</h3>
+## 3.1 Objective
 The objective was to install Microsoft Sysmon on the Windows 11 virtual machine and verify that it recorded process creation activity.
 
 ## 3.2 Installation Procedure
@@ -230,9 +230,9 @@ The objective was to validate Sysmon's ability to record process creation activi
 </ol>
 <pre><code>whoami
 ipconfig
-IMG 7
-<ol start="3">
- 	<li>Open Event Viewer and navigate to <code>Applications and Services Logs → Microsoft → Windows → Sysmon → Operational</code>.</li>
+
+ IMG 7
+  <li>Open Event Viewer and navigate to <code>Applications and Services Logs → Microsoft → Windows → Sysmon → Operational</code>.</li>
  	<li>Locate Event ID 1 for the execution of <code>ipconfig.exe</code>.</li>
  	<li>Open the event and review the available process details.</li>
 </ol>
