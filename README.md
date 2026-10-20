@@ -224,19 +224,17 @@ This evidence shows Windows recording the addition of the test account to the Re
 The objective was to validate Sysmon's ability to record process creation activity and capture details useful for security investigations.
 
 ## 7.2 Test Procedure
-<ol start="1">
- 	<li>Open Command Prompt.</li>
- 	<li>Run the following commands:</li>
- 
-</ol>
-<pre><code>whoami
-ipconfig
-IMG 
 
-  <li>Open Event Viewer and navigate to <code>Applications and Services Logs → Microsoft → Windows → Sysmon → Operational</code>.</li>
- 	<li>Locate Event ID 1 for the execution of <code>ipconfig.exe</code>.</li>
- 	<li>Open the event and review the available process details.</li>
-</ol>
+Open Command Prompt.
+Run the following commands:
+whoami
+ipconfig
+
+Open Event Viewer and navigate to Applications and Services Logs → Microsoft → Windows → Sysmon → Operational.
+Locate Event ID 1 for the execution of ipconfig.exe.
+Open the event and review the available process details.
+
+## 7.3 Results
 
 ## 7.3 Results
 Sysmon recorded Event ID 1 for <code>ipconfig.exe</code>. The event contained process information including the executable path, command line, parent process, user context, integrity level, and SHA-256 hash.
